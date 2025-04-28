@@ -1,0 +1,141 @@
+:root {
+  --color-primary: #7c9d76; /* Sage green */
+  --color-secondary: #a67f5d; /* Warm brown */
+  --color-light: #e6efe4; /* Light sage */
+  --color-dark: #2f3e2e; /* Dark forest green */
+  --color-accent: #d4b59e; /* Light brown */
+  --color-background: #f5f7f4; /* Off-white with green tint */
+}
+
+/* General Styles */
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--color-dark);
+  background-color: var(--color-background);
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(245, 247, 244, 0.95) !important;
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  color: var(--color-dark) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-primary) !important;
+}
+
+/* Sections */
+.section {
+  padding: 100px 0;
+}
+
+/* Home Section */
+#home {
+  min-height: 100vh;
+  background-color: var(--color-light);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  padding: 12px 30px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+  transform: translateY(-2px);
+}
+
+/* Service Cards */
+.service-card {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.service-card h5 {
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+/* Contact Form */
+.form-control {
+  border: 2px solid var(--color-light);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: none;
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-dark) !important;
+  padding: 20px 0;
+}
+
+/* Headings */
+h1,
+h2,
+h5 {
+  font-weight: 700;
+}
+
+h2 {
+  color: var(--color-secondary);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
