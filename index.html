@@ -2,174 +2,444 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Teleprag Dedetização</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Teleprag Dedetizadora em Recife | Controle de Pragas e Dedetização
+    </title>
+    <link rel="icon" type="image/png" href="assets/img/icon-teleprag.png" />
     <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!--Fonts-->
+    <!--  -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!--  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/index.css" />
   </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="fixed-top bg-white shadow-sm">
+      <nav class="navbar navbar-expand-lg py-3">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="#">
+            <img
+              src="assets/img/logo-teleprag.png"
+              alt="Teleprag Logo"
+              height="40"
+            />
+          </a>
 
-  <body
-    data-bs-spy="scroll"
-    data-bs-target="#navbar"
-    data-bs-offset="100"
-    tabindex="0"
-  >
-    <!-- Navbar -->
-    <nav
-      id="navbar"
-      class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="#home">
-          <img src="assets/img/logo-teleprag.png" alt="Teleprag" height="40" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#home">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#sobre">Sobre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#servicos">Serviços</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contato">Contato</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+          <!-- Mobile Menu Toggle -->
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarOffcanvas"
+            aria-controls="navbarOffcanvas"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars fa-lg text-primary"></i>
+          </button>
 
-    <!-- Home -->
-    <section id="home" class="section d-flex align-items-center">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <h1 class="mb-4">Controle de Pragas Urbanas com Qualidade</h1>
-            <p class="mb-4">
-              Desde 2000, garantindo saúde ambiental em Recife e Região
-              Metropolitana com atendimento personalizado.
-            </p>
-            <a href="#contato" class="btn btn-primary">Solicite um Orçamento</a>
+          <!-- Offcanvas Menu Container -->
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="navbarOffcanvas"
+            aria-labelledby="navbarOffcanvasLabel"
+            style="width: 300px"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="navbarOffcanvasLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Quem somos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Serviços</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pragas Urbanas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Área de cobertura</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contato</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="col-lg-6 text-center">
+        </div>
+      </nav>
+    </header>
+
+    <!-- Spacer for fixed header -->
+    <div style="height: 76px"></div>
+
+    <!-- Seção Principal (Hero) -->
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-start min-vh-100">
+          <!-- Coluna Esquerda - Conteúdo -->
+          <div class="col-lg-6 text-white mt-5">
+            <img
+              src="assets/img/logo-teleprag.png"
+              alt="Teleprag Logo"
+              class="mb-3"
+              height="60"
+            />
+
+            <!-- Container de Animação -->
+            <h1 class="hero-title animacao-container mb-4">
+              <span class="frase"
+                >Limpeza de Reservatórios, Cisterna e Caixa d'Água
+              </span>
+              <span class="frase"
+                >Controle de Pragas Urbanos, Desratização, Descupinização</span
+              >
+              <span class="frase">Dedetizaçã, Desinsetização, Sanitização</span>
+            </h1>
+
+            <h2 class="lead mb-4">
+              Serviços de dedetização em Recife com garantia de qualidade e
+              segurança.
+            </h2>
+          </div>
+
+          <!-- Coluna Direita - Imagem com Overlay -->
+          <div class="col-lg-6 position-relative mt-4 hero-image-container">
+            <!-- Contato Flutuante -->
+            <div class="floating-contact">
+              <a href="tel:8199999999" class="phone-btn mb-3">
+                <i class="fas fa-phone me-2"></i>(81) 99999-9999
+              </a>
+              <a
+                href="https://wa.me/5581999999999"
+                class="whatsapp-btn"
+                target="_blank"
+              >
+                <i class="fab fa-whatsapp me-2"></i>Solicite um Orçamento
+              </a>
+              <br />
+
+              <!-- Botão Saiba Mais Animado -->
+              <a href="#sobre" class="btn-saiba-mais">
+                <span class="btn-text">Saiba Mais</span>
+                <div class="arrows">
+                  <i class="fas fa-chevron-down arrow-1"></i>
+                  <i class="fas fa-chevron-down arrow-2"></i>
+                </div>
+              </a>
+            </div>
+
             <img
               src="assets/img/img1.png"
-              alt="Dedetização"
-              class="img-fluid rounded"
+              alt="Controle de Pragas"
+              class="hero-image"
             />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Sobre -->
-    <section id="sobre" class="section bg-light">
+    <!-- Divisor com Curva -->
+    <div class="curved-div">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="var(--light-bg)"
+          fill-opacity="1"
+          d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+
+    <section id="sobre" class="py-5 bg-light">
       <div class="container">
-        <div class="text-center mb-5">
-          <h2>Sobre a Teleprag</h2>
+        <!-- Texto Principal -->
+        <div class="text-content text-center mb-5">
+          <h3 class="mb-4">
+            Proteja seu imóvel com mais saúde e menos riscos!
+          </h3>
+          <p class="text-content">
+            Na Teleprag, aplicamos o Controle Inteligente de Pragas (CIP), um
+            conjunto de estratégias inteligentes que priorizam a prevenção e a
+            redução do uso de produtos químicos. Nosso objetivo é garantir
+            ambientes mais saudáveis, seguros e livres de pragas, sempre com
+            soluções planejadas e personalizadas para cada situação e ambiente.
+          </p>
           <p>
-            Desde 2000 no ramo de controle de pragas urbanas, atuando em toda
-            Região Metropolitana do Recife com equipe técnica especializada e
-            atendimento personalizado.
+            Com a Teleprag, seu espaço fica mais protegido, saudável e
+            sustentável!
           </p>
         </div>
-        <div class="row text-center">
-          <div class="col-md-4">
-            <h5>Missão</h5>
-            <p>Proteger a saúde ambiental através do controle de pragas.</p>
+
+        <!-- Cards em Linha -->
+        <div class="cards-row">
+          <div
+            class="card card-primary"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="card-body">
+              <div class="card-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h5><strong>EDUCAÇÃO AMBIENTAL</strong></h5>
+              <p>
+                Conscientizamos moradores e colaboradores sobre práticas que
+                dificultam a presença de pragas, promovendo hábitos preventivos
+                no dia a dia.
+              </p>
+            </div>
           </div>
-          <div class="col-md-4">
-            <h5>Visão</h5>
-            <p>Ser referência em soluções ambientais na nossa região.</p>
+
+          <div
+            class="card card-secondary"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="card-body">
+              <div class="card-icon">
+                <i class="fas fa-flask"></i>
+              </div>
+              <h5><strong>CONTROLE QUÍMICO</strong></h5>
+              <p>
+                Utilizamos produtos de forma estratégica, aplicando-os apenas
+                onde realmente é necessário, de acordo com o tipo de praga e o
+                grau de infestação.
+              </p>
+            </div>
           </div>
-          <div class="col-md-4">
-            <h5>Valores</h5>
-            <p>Ética, qualidade, responsabilidade ambiental e inovação.</p>
+
+          <div class="card card-accent" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-body">
+              <div class="card-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <h5><strong>CONTROLE BIOLÓGICO</strong></h5>
+              <p>
+                Estudamos o comportamento e o ciclo de vida das pragas para
+                aplicar métodos de controle mais naturais e eficazes.
+              </p>
+            </div>
+          </div>
+
+          <div class="card card-light" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-body">
+              <div class="card-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h5><strong>BARREIRAS FÍSICA</strong></h5>
+              <p>
+                Atuamos diretamente nos fatores que favorecem a infestação — Na
+                ordem: ACESSO, ÁGUA, ALIMENTO E ABRIGO (os 4 A’s) — para impedir
+                a entrada e a proliferação das pragas.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Serviços -->
-    <section id="servicos" class="section">
+    <section id="servicos" class="py-5 bg-white">
       <div class="container">
-        <div class="text-center mb-5">
-          <h2>Nossos Serviços</h2>
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <h2 class="display-5 fw-bold">Nossos Serviços</h2>
+          <p class="text-muted">Soluções completas em controle de pragas</p>
         </div>
-        <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="service-card p-4 text-center shadow-sm rounded">
-              <h5>Desinsetização</h5>
-              <p>
-                Controle de insetos rasteiros e voadores em ambientes
-                residenciais e comerciais.
-              </p>
+
+        <div class="row g-4">
+          <!-- Card Desinsetização -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="service-card">
+              <div class="service-card-banner">
+                <span class="service-tag">
+                  <i class="fas fa-info-circle me-1"></i>
+                  Saiba mais
+                </span>
+              </div>
+              <div class="card-body">
+                <div class="service-icon-wrapper">
+                  <i class="fas fa-spider service-icon"></i>
+                </div>
+                <h5 class="card-title">Desinsetização</h5>
+                <p class="card-text">
+                  Controle e eliminação eficaz de insetos rasteiros e voadores,
+                  com métodos seguros e personalizados para cada ambiente.
+                </p>
+                <a href="#desinsetizacao" class="btn-service-details">
+                  Ver detalhes
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="service-card p-4 text-center shadow-sm rounded">
-              <h5>Descupinização</h5>
-              <p>
-                Eliminação de cupins com técnicas eficazes e produtos de
-                qualidade.
-              </p>
+
+          <!-- Repita o padrão para os outros cards -->
+
+          <!-- Card Extra (Placeholder) -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="service-card new-service">
+              <div class="service-card-banner">
+                <span class="service-tag">
+                  <i class="fas fa-star me-1"></i>
+                  Novo serviço
+                </span>
+              </div>
+              <div class="card-body">
+                <div class="service-icon-wrapper">
+                  <i class="fas fa-shield-virus service-icon"></i>
+                </div>
+                <h5 class="card-title">Novo Serviço</h5>
+                <p class="card-text">
+                  Em breve, mais uma solução inovadora para sua segurança e
+                  bem-estar.
+                </p>
+                <a href="#novo" class="btn-service-details disabled">
+                  Em breve
+                  <i class="fas fa-clock"></i>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="service-card p-4 text-center shadow-sm rounded">
-              <h5>Desratização</h5>
-              <p>
-                Controle de roedores com métodos seguros e ambientalmente
-                corretos.
-              </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section id="diferenciais" class="py-5 bg-light">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <h2 class="display-5 fw-bold">Por que escolher a Teleprag?</h2>
+          <p class="text-muted">Excelência e qualidade em cada serviço</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="differential-accordion">
+              <div class="accordion" id="differentialAccordion">
+                <!-- Item 1 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#diff1"
+                    >
+                      <i class="fas fa-user-tie me-2"></i>
+                      Equipe Técnica Especializada
+                    </button>
+                  </h2>
+                  <div
+                    id="diff1"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#differentialAccordion"
+                  >
+                    <div class="accordion-body">
+                      Nossa equipe é composta por profissionais certificados e
+                      em constante atualização, garantindo a melhor execução dos
+                      serviços com total segurança e eficiência.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Repita para os outros diferenciais -->
+              </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="service-card p-4 text-center shadow-sm rounded">
-              <h5>Controle de Morcegos</h5>
-              <p>Remoção segura de morcegos em ambientes urbanos.</p>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="differential-image">
+              <img
+                src="assets/img/diferencial.jpg"
+                alt="Equipe Teleprag"
+                class="img-fluid rounded-4 shadow"
+              />
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="service-card p-4 text-center shadow-sm rounded">
-              <h5>Controle de Pombos</h5>
-              <p>
-                Aplicação de métodos éticos para afastamento de aves urbanas.
+        </div>
+      </div>
+    </section>
+
+    <!-- Área de Atuação -->
+    <section id="area-atuacao" class="py-5">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <h2 class="display-5 fw-bold">Onde Atuamos</h2>
+          <p class="text-muted">
+            Presente em toda Região Metropolitana do Recife
+          </p>
+        </div>
+
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="coverage-content">
+              <h3 class="h4 mb-4">Atendemos toda a Grande Recife</h3>
+              <p class="lead">
+                Estamos estrategicamente posicionados para atender com agilidade
+                e eficiência toda a região metropolitana do Recife.
               </p>
+              <div class="cities-grid">
+                <div class="city-item">
+                  <i class="fas fa-map-marker-alt text-primary"></i>
+                  Recife
+                </div>
+                <!-- Repita para outras cidades -->
+              </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="service-card p-4 text-center shadow-sm rounded">
-              <h5>Limpeza de Reservatórios</h5>
-              <p>
-                Higienização de caixas d'água para garantir a saúde da sua
-                família.
-              </p>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="map-container">
+              <!-- Placeholder para o mapa -->
+              <div class="map-placeholder rounded-4 shadow">
+                <img
+                  src="assets/img/mapa.jpg"
+                  alt="Mapa de Cobertura"
+                  class="img-fluid"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -177,71 +447,154 @@
     </section>
 
     <!-- Contato -->
-    <section id="contato" class="section bg-light">
+    <section id="contato" class="py-5 bg-light">
       <div class="container">
-        <div class="text-center mb-5">
-          <h2>Fale Conosco</h2>
-          <p>Preencha o formulário abaixo para receber um orçamento.</p>
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <h2 class="display-5 fw-bold">Fale Conosco</h2>
+          <p class="text-muted">Estamos prontos para atender você</p>
         </div>
-        <form
-          action="https://formsubmit.co/pragasrecife@gmail.com"
-          method="POST"
-          class="row g-3"
-        >
-          <div class="col-md-6">
-            <input
-              type="text"
-              class="form-control"
-              name="nome"
-              placeholder="Seu Nome"
-              required
-            />
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="contact-card text-center">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <h3 class="h5">Telefone</h3>
+              <p>(81) 99999-9999</p>
+              <a
+                href="tel:8199999999"
+                class="btn btn-outline-primary rounded-pill"
+              >
+                Ligar agora
+              </a>
+            </div>
           </div>
-          <div class="col-md-6">
-            <input
-              type="email"
-              class="form-control"
-              name="email"
-              placeholder="Seu E-mail"
-              required
-            />
+
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="contact-card text-center">
+              <div class="contact-icon">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <h3 class="h5">WhatsApp</h3>
+              <p>Atendimento rápido</p>
+              <a
+                href="https://wa.me/5581999999999"
+                class="btn btn-success rounded-pill"
+              >
+                Enviar mensagem
+              </a>
+            </div>
           </div>
-          <div class="col-12">
-            <textarea
-              class="form-control"
-              name="mensagem"
-              rows="4"
-              placeholder="Sua Mensagem"
-              required
-            ></textarea>
+
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="contact-card text-center">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3 class="h5">Endereço</h3>
+              <p>Recife, PE</p>
+              <a href="#" class="btn btn-outline-primary rounded-pill">
+                Ver no mapa
+              </a>
+            </div>
           </div>
-          <div class="col-12 text-center">
-            <button type="submit" class="btn btn-primary">
-              Enviar Mensagem
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
     </section>
 
-    <!-- WhatsApp Button -->
-    <a
-      href="https://wa.me/5581997602414"
-      class="whatsapp-float"
-      target="_blank"
-    >
-      <img src="assets/img/whatsapp.png" alt="WhatsApp" width="60" />
-    </a>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
+    <!-- Footer Moderno -->
+    <footer class="footer bg-dark text-white py-5">
       <div class="container">
-        &copy; 2025 Teleprag Dedetização. Todos os direitos reservados.
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <img
+              src="assets/img/logo-teleprag.png"
+              alt="Teleprag Logo"
+              class="footer-logo mb-3"
+            />
+            <p class="mb-0">
+              Soluções profissionais em controle de pragas para sua casa ou
+              empresa.
+            </p>
+          </div>
+
+          <div class="col-lg-2">
+            <h5 class="footer-title">Links</h5>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3">
+            <h5 class="footer-title">Contato</h5>
+            <ul class="footer-contact">
+              <li>
+                <i class="fas fa-phone me-2"></i>
+                (81) 99999-9999
+              </li>
+              <li>
+                <i class="fas fa-envelope me-2"></i>
+                contato@teleprag.com.br
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3">
+            <h5 class="footer-title">Redes Sociais</h5>
+            <div class="footer-social">
+              <a href="#" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="footer-bottom text-center">
+          <p class="mb-0">
+            © 2024 Teleprag Dedetizadora - Todos os direitos reservados
+          </p>
+        </div>
       </div>
     </footer>
 
-    <!-- Bootstrap JS + Scroll Suave -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Botão Voltar ao Topo -->
+    <button id="backToTop" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a
+      href="https://wa.me/5581999999999"
+      class="floating-whatsapp"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="scripts/main.js"></script>
   </body>
 </html>
