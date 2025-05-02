@@ -38,64 +38,65 @@
       <nav class="navbar navbar-expand-lg py-3">
         <div class="container">
           <!-- Logo -->
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             <img
-              src="assets/img/logo-teleprag.png"
+              src="../assets/img/logo-teleprag.png"
               alt="Teleprag Logo"
               height="40"
             />
           </a>
 
-          <!-- Mobile Menu Toggle -->
+          <!-- Botão Menu Mobile -->
           <button
             class="navbar-toggler border-0"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#navbarOffcanvas"
-            aria-controls="navbarOffcanvas"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
           >
             <i class="fas fa-bars fa-lg text-primary"></i>
           </button>
 
-          <!-- Offcanvas Menu Container -->
+          <!-- Menu Lateral -->
           <div
             class="offcanvas offcanvas-end"
             tabindex="-1"
             id="navbarOffcanvas"
-            aria-labelledby="navbarOffcanvasLabel"
             style="width: 300px"
           >
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="navbarOffcanvasLabel">Menu</h5>
+              <h5 class="offcanvas-title">Menu</h5>
               <button
                 type="button"
                 class="btn-close text-reset"
                 data-bs-dismiss="offcanvas"
-                aria-label="Close"
               ></button>
             </div>
 
             <div class="offcanvas-body">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#home">Home</a>
+                  <a class="nav-link" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Quem somos</a>
+                  <a class="nav-link" href="pages/quem-somos.html"
+                    >Quem somos</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Serviços</a>
+                  <a class="nav-link" href="pages/servicos.html">Serviços</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Pragas Urbanas</a>
+                  <a class="nav-link" href="pages/pragas-urbanas.html"
+                    >Pragas Urbanas</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Área de cobertura</a>
+                  <a class="nav-link" href="pages/cobertura.html"
+                    >Área de cobertura</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contato</a>
+                  <a class="nav-link" href="pages/contato.html">Contato</a>
                 </li>
               </ul>
             </div>
@@ -104,7 +105,7 @@
       </nav>
     </header>
 
-    <!-- Spacer for fixed header -->
+    <!-- Espaçador para header fixo -->
     <div style="height: 76px"></div>
 
     <!-- Seção Principal (Hero) -->
@@ -141,8 +142,12 @@
           <div class="col-lg-6 position-relative mt-4 hero-image-container">
             <!-- Contato Flutuante -->
             <div class="floating-contact">
-              <a href="tel:8199999999" class="phone-btn mb-3">
-                <i class="fas fa-phone me-2"></i>(81) 99999-9999
+              <a
+                href="tel:81995316082
+              "
+                class="phone-btn mb-3"
+              >
+                <i class="fas fa-phone me-2"></i>(81) 4102-4415
               </a>
               <a
                 href="https://wa.me/5581999999999"
@@ -154,7 +159,7 @@
               <br />
 
               <!-- Botão Saiba Mais Animado -->
-              <a href="#sobre" class="btn-saiba-mais">
+              <a href="#divisao" class="btn-saiba-mais">
                 <span class="btn-text">Saiba Mais</span>
                 <div class="arrows">
                   <i class="fas fa-chevron-down arrow-1"></i>
@@ -174,7 +179,7 @@
     </section>
 
     <!-- Divisor com Curva -->
-    <div class="curved-div">
+    <div id="divisao" class="curved-div">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="var(--light-bg)"
@@ -184,11 +189,12 @@
       </svg>
     </div>
 
+    <!--Sobre -->
     <section id="sobre" class="py-5 bg-light">
       <div class="container">
         <!-- Texto Principal -->
         <div class="text-content text-center mb-5">
-          <h3 class="mb-4">
+          <h3 class="mb-4 display-5 fw-bold">
             Proteja seu imóvel com mais saúde e menos riscos!
           </h3>
           <p class="text-content">
@@ -281,23 +287,17 @@
         </div>
 
         <div class="row g-4">
-          <!-- Card Desinsetização -->
+          <!-- Card Serviços -->
           <div
             class="col-lg-4 col-md-6"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             <div class="service-card">
-              <div class="service-card-banner">
-                <span class="service-tag">
-                  <i class="fas fa-info-circle me-1"></i>
-                  Saiba mais
-                </span>
+              <div class="service-card-image">
+                <img src="assets/img/desinsetizacao.jpg" alt="Desinsetização" />
               </div>
               <div class="card-body">
-                <div class="service-icon-wrapper">
-                  <i class="fas fa-spider service-icon"></i>
-                </div>
                 <h5 class="card-title">Desinsetização</h5>
                 <p class="card-text">
                   Controle e eliminação eficaz de insetos rasteiros e voadores,
@@ -311,33 +311,125 @@
             </div>
           </div>
 
-          <!-- Repita o padrão para os outros cards -->
-
-          <!-- Card Extra (Placeholder) -->
           <div
             class="col-lg-4 col-md-6"
             data-aos="fade-up"
-            data-aos-delay="500"
+            data-aos-delay="100"
           >
-            <div class="service-card new-service">
-              <div class="service-card-banner">
-                <span class="service-tag">
-                  <i class="fas fa-star me-1"></i>
-                  Novo serviço
-                </span>
+            <div class="service-card">
+              <div class="service-card-image">
+                <img src="assets/img/desratinizacao.jpg" alt="Desratinização" />
               </div>
               <div class="card-body">
-                <div class="service-icon-wrapper">
-                  <i class="fas fa-shield-virus service-icon"></i>
-                </div>
-                <h5 class="card-title">Novo Serviço</h5>
+                <h5 class="card-title">Desratinização</h5>
                 <p class="card-text">
-                  Em breve, mais uma solução inovadora para sua segurança e
-                  bem-estar.
+                  Desratização segura e eficaz contra roedores, protegendo sua
+                  casa ou empresa com tecnologia, experiência e responsabilidade
+                  ambiental.
                 </p>
-                <a href="#novo" class="btn-service-details disabled">
-                  Em breve
-                  <i class="fas fa-clock"></i>
+                <a href="#desinsetizacao" class="btn-service-details">
+                  Ver detalhes
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="service-card">
+              <div class="service-card-image">
+                <img src="assets/img/descupinizacao.jpg" alt="Descupinização" />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Descupinização</h5>
+                <p class="card-text">
+                  Descupinização eficaz e segura, protegendo móveis e estruturas
+                  com técnicas modernas, equipe especializada e atendimento
+                  personalizado.
+                </p>
+                <a href="#desinsetizacao" class="btn-service-details">
+                  Ver detalhes
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="service-card">
+              <div class="service-card-image">
+                <img src="assets/img/sanitizacao.jpg" alt="Sanitização" />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Sanitização e desinfecção de ambientes comerciais e domésticos
+                  em Recife
+                </h5>
+                <p class="card-text">
+                  Sanitização profissional que elimina vírus, fungos e
+                  bactérias, garantindo ambientes seguros com tecnologia,
+                  eficácia e atendimento personalizado.
+                </p>
+                <a href="#desinsetizacao" class="btn-service-details">
+                  Ver detalhes
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="service-card">
+              <div class="service-card-image">
+                <img
+                  src="assets/img/limpeza.jpg"
+                  alt="Limpeza de Reservatórios"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Limpeza de Reservatórios</h5>
+                <p class="card-text">
+                  Controle e eliminação eficaz de insetos rasteiros e voadores,
+                  com métodos seguros e personalizados para cada ambiente.
+                </p>
+                <a href="#desinsetizacao" class="btn-service-details">
+                  Ver detalhes
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="service-card">
+              <div class="service-card-image">
+                <img src="https://picsum.photos/600/401" alt="Desinsetização" />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Desinsetização</h5>
+                <p class="card-text">
+                  Controle e eliminação eficaz de insetos rasteiros e voadores,
+                  com métodos seguros e personalizados para cada ambiente.
+                </p>
+                <a href="#desinsetizacao" class="btn-service-details">
+                  Ver detalhes
+                  <i class="fas fa-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -358,7 +450,7 @@
           <div class="col-lg-6" data-aos="fade-right">
             <div class="differential-accordion">
               <div class="accordion" id="differentialAccordion">
-                <!-- Item 1 -->
+                <!-- Item  -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button
@@ -367,8 +459,8 @@
                       data-bs-toggle="collapse"
                       data-bs-target="#diff1"
                     >
-                      <i class="fas fa-user-tie me-2"></i>
-                      Equipe Técnica Especializada
+                      <i class="fas fa-user-check me-2"></i>
+                      Equipe técnica especializada e certificada
                     </button>
                   </h2>
                   <div
@@ -377,14 +469,87 @@
                     data-bs-parent="#differentialAccordion"
                   >
                     <div class="accordion-body">
-                      Nossa equipe é composta por profissionais certificados e
-                      em constante atualização, garantindo a melhor execução dos
-                      serviços com total segurança e eficiência.
+                      Contamos com profissionais altamente treinados e
+                      certificados, prontos para oferecer soluções eficazes com
+                      máxima segurança e competência.
                     </div>
                   </div>
                 </div>
 
-                <!-- Repita para os outros diferenciais -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#diff2"
+                    >
+                      <i class="fas fa-vials me-2"></i>
+                      Produtos regularizados (Anvisa e Ministério da Saúde)
+                    </button>
+                  </h2>
+                  <div
+                    id="diff2"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#differentialAccordion"
+                  >
+                    <div class="accordion-body">
+                      Utilizamos apenas produtos aprovados pelos órgãos
+                      reguladores, garantindo máxima eficácia sem comprometer a
+                      saúde ou o meio ambiente.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#diff3"
+                    >
+                      <i class="fas fa-tools me-2"></i>
+                      Equipamentos modernos e técnicas atualizadas
+                    </button>
+                  </h2>
+                  <div
+                    id="diff3"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#differentialAccordion"
+                  >
+                    <div class="accordion-body">
+                      Trabalhamos com tecnologia de ponta e técnicas inovadoras
+                      para garantir resultados mais rápidos, seguros e
+                      duradouros em cada serviço.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#diff4"
+                    >
+                      <i class="fas fa-headset me-2"></i>
+                      Atendimento rápido, personalizado e com garantia
+                    </button>
+                  </h2>
+                  <div
+                    id="diff4"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#differentialAccordion"
+                  >
+                    <div class="accordion-body">
+                      Oferecemos atendimento ágil, focado nas suas necessidades,
+                      com garantia total de serviço e suporte pós-venda de
+                      excelência.
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -392,7 +557,7 @@
           <div class="col-lg-6" data-aos="fade-left">
             <div class="differential-image">
               <img
-                src="assets/img/diferencial.jpg"
+                src="assets/img/img1.png"
                 alt="Equipe Teleprag"
                 class="img-fluid rounded-4 shadow"
               />
@@ -425,7 +590,38 @@
                   <i class="fas fa-map-marker-alt text-primary"></i>
                   Recife
                 </div>
-                <!-- Repita para outras cidades -->
+                <div class="city-item">
+                  <i class="fas fa-map-marker-alt text-primary"></i>
+                  Olinda
+                </div>
+                <div class="city-item">
+                  <i class="fas fa-map-marker-alt text-primary"></i>
+                  Jaboatão dos Guararapes
+                </div>
+                <div class="city-item">
+                  <i class="fas fa-map-marker-alt text-primary"></i>
+                  Paulista
+                </div>
+                <div class="city-item">
+                  <i class="fas fa-map-marker-alt text-primary"></i>
+                  Camaragibe
+                </div>
+                <div class="city-item">
+                  <i class="fas fa-map-marker-alt text-primary"></i>
+                  Cabo de Santo Agostinho
+                </div>
+                <div class="city-item">
+                  <i class="fas fa-map-marker-alt text-primary"></i>
+                  Igarassu
+                </div>
+                <div class="city-item">
+                  <i class="fas fa-map-marker-alt text-primary"></i>
+                  Abreu e Lima
+                </div>
+                <div class="city-item">
+                  <i class="fas fa-map-marker-alt text-primary"></i>
+                  Toda Região Metropolitana do Recife
+                </div>
               </div>
             </div>
           </div>
@@ -435,7 +631,7 @@
               <!-- Placeholder para o mapa -->
               <div class="map-placeholder rounded-4 shadow">
                 <img
-                  src="assets/img/mapa.jpg"
+                  src="assets/img/area.jpg"
                   alt="Mapa de Cobertura"
                   class="img-fluid"
                 />
@@ -461,9 +657,10 @@
                 <i class="fas fa-phone-alt"></i>
               </div>
               <h3 class="h5">Telefone</h3>
-              <p>(81) 99999-9999</p>
+              <p>(81) 4102-4415</p>
               <a
-                href="tel:8199999999"
+                href="tel:81995316082
+                "
                 class="btn btn-outline-primary rounded-pill"
               >
                 Ligar agora
@@ -490,23 +687,6 @@
               </a>
             </div>
           </div>
-
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="contact-card text-center">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <h3 class="h5">Endereço</h3>
-              <p>Recife, PE</p>
-              <a href="#" class="btn btn-outline-primary rounded-pill">
-                Ver no mapa
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -517,7 +697,7 @@
         <div class="row g-4">
           <div class="col-lg-4">
             <img
-              src="assets/img/logo-teleprag.png"
+              src="/assets/img/logo-teleprag.png"
               alt="Teleprag Logo"
               class="footer-logo mb-3"
             />
@@ -530,10 +710,12 @@
           <div class="col-lg-2">
             <h5 class="footer-title">Links</h5>
             <ul class="footer-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#servicos">Serviços</a></li>
-              <li><a href="#contato">Contato</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="pages/quem-somos.html">Quem somos</a></li>
+              <li><a href="pages/servicos.html">Serviços</a></li>
+              <li><a href="pages/pragas-urbanas.html">Pragas Urbanas</a></li>
+              <li><a href="pages/cobertura.html">Área de cobertura</a></li>
+              <li><a href="pages/contato.html">Contato</a></li>
             </ul>
           </div>
 
@@ -542,11 +724,11 @@
             <ul class="footer-contact">
               <li>
                 <i class="fas fa-phone me-2"></i>
-                (81) 99999-9999
+                (81) 4102-4415
               </li>
               <li>
                 <i class="fas fa-envelope me-2"></i>
-                contato@teleprag.com.br
+                teleprag.sa@gmail.com
               </li>
             </ul>
           </div>
@@ -554,13 +736,16 @@
           <div class="col-lg-3">
             <h5 class="footer-title">Redes Sociais</h5>
             <div class="footer-social">
-              <a href="#" class="social-link">
+              <a href="https://www.facebook.com/teleprag" class="social-link">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#" class="social-link">
+              <a
+                href="https://www.instagram.com/teleprag/?igsh=MTJpZW8wYzUzdGdxdw%3D%3D#"
+                class="social-link"
+              >
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="#" class="social-link">
+              <a href="https://wa.me/5581995316082" class="social-link">
                 <i class="fab fa-whatsapp"></i>
               </a>
             </div>
@@ -571,11 +756,24 @@
 
         <div class="footer-bottom text-center">
           <p class="mb-0">
-            © 2024 Teleprag Dedetizadora - Todos os direitos reservados
+            © 2025 Teleprag Dedetizadora - Todos os direitos reservados
           </p>
         </div>
       </div>
     </footer>
+
+    <!-- Botões Flutuantes -->
+    <button id="backToTop" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <a
+      href="https://wa.me/5581995316082"
+      class="floating-whatsapp"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Botão Voltar ao Topo -->
     <button id="backToTop" class="back-to-top">
@@ -584,7 +782,7 @@
 
     <!-- Botão WhatsApp Flutuante -->
     <a
-      href="https://wa.me/5581999999999"
+      href="https://wa.me/5581995316082"
       class="floating-whatsapp"
       target="_blank"
     >
