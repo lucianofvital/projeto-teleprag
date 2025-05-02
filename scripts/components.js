@@ -36,8 +36,8 @@ function fixScrolling() {
 // Função para inicializar componentes
 function initComponents() {
   // Carrega header e footer
-  loadComponent("header-container", "/components/header.html");
-  loadComponent("footer-container", "/components/footer.html");
+  loadComponent("header-container", "../components/header.html");
+  loadComponent("footer-container", "../components/footer.html");
 
   // Corrige rolagem ao carregar e redimensionar
   window.addEventListener("load", fixScrolling);
