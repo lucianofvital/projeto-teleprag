@@ -3,170 +3,271 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pragas Urbanas - Teleprag</title>
+    <title>Pragas Urbanas | Teleprag</title>
 
-    <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="../styles/index.css" />
     <link rel="stylesheet" href="../styles/pragas.css" />
   </head>
-  <body>
-    <!-- Header & Navigation -->
+  <body class="bg-light">
+    <!-- Header Container -->
     <div id="header-container"></div>
 
-    <main>
-      <!-- Hero Section -->
-      <section class="page-hero bg-light py-5">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6" data-aos="fade-right">
-              <h1 class="display-4 fw-bold mb-4">Pragas Urbanas</h1>
-              <p class="lead mb-4">
-                Conheça as principais pragas que a Teleprag controla, garantindo
-                um ambiente mais seguro e saudável para você.
+    <!-- Hero Section -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <h1 class="display-4 fw-bold text-center mb-4">Pragas Urbanas</h1>
+        <p class="lead text-center mb-5">
+          Conheça as principais pragas que afetam residências e empresas, e
+          descubra como a Teleprag pode ajudar você.
+        </p>
+      </div>
+    </section>
+
+    <!-- Pragas Grid -->
+    <div class="container-fluid">
+      <div class="pest-grid">
+        <!-- Ratos -->
+        <div class="pest-card">
+          <div class="pest-image-container">
+            <img src="../assets/img/ratos.png" alt="Ratos" class="pest-image" />
+          </div>
+          <div class="pest-footer">
+            <button class="btn-saiba-mais" onclick="toggleInfo(this)">
+              Saiba Mais
+            </button>
+          </div>
+          <div class="pest-info">
+            <h2 class="pest-title">Ratos</h2>
+            <div class="tags mb-3">
+              <span class="info-tag tag-risk">Alto Risco à Saúde</span>
+              <span class="info-tag tag-warning">Danos Estruturais</span>
+            </div>
+            <div class="pest-description">
+              <p>
+                Controle de Ratos: Riscos, Curiosidades e Como a Teleprag Pode
+                Ajudar Você.
+              </p>
+              <h3 class="h5 mt-3 mb-2">Principais Espécies:</h3>
+              <ul>
+                <li>Rato-preto (Rattus rattus)</li>
+                <li>Ratazana (Rattus norvegicus)</li>
+                <li>Camundongo (Mus musculus)</li>
+              </ul>
+              <p>
+                Os ratos transmitem doenças graves, como leptospirose,
+                hantavirose, salmonelose e peste bubônica. Além disso, podem
+                provocar curtos-circuitos ao roer fios elétricos, contaminar
+                alimentos e causar danos a móveis e estruturas.
               </p>
             </div>
-            <div class="col-lg-6" data-aos="fade-left">
-              <img
-                src="../assets/img/img1.png"
-                alt="Controle de Pragas"
-                class="img-fluid rounded-4 shadow"
-              />
-            </div>
+            <a
+              href="https://wa.me/5581995316082"
+              class="contact-btn"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp me-2"></i>Solicitar Orçamento
+            </a>
           </div>
         </div>
-      </section>
 
-      <!-- Seção de Pragas -->
-      <section id="pragas" class="pests-section py-5">
-        <div class="container">
-          <div class="row g-4">
-            <!-- Insetos Rasteiros -->
-            <div class="col-lg-4" data-aos="fade-up">
-              <div class="pest-category-card">
-                <div class="pest-category-icon">
-                  <i class="fas fa-bug"></i>
-                </div>
-                <h2 class="h4 mb-4">Insetos Rasteiros</h2>
-                <ul class="pest-list">
-                  <li>
-                    <i class="fas fa-check"></i>Baratas (americanas, alemãs e
-                    orientais)
-                  </li>
-                  <li>
-                    <i class="fas fa-check"></i>Formigas (diversas espécies)
-                  </li>
-                  <li><i class="fas fa-check"></i>Pulgas</li>
-                  <li><i class="fas fa-check"></i>Carrapatos</li>
-                  <li><i class="fas fa-check"></i>Escorpiões</li>
-                  <li><i class="fas fa-check"></i>Aranhas</li>
-                  <li><i class="fas fa-check"></i>Cupins</li>
-                  <li><i class="fas fa-check"></i>Caramujos</li>
-                  <li><i class="fas fa-check"></i>Lacraias</li>
-                  <li><i class="fas fa-check"></i>Traças</li>
-                  <li><i class="fas fa-check"></i>Percevejos de cama</li>
-                  <li><i class="fas fa-check"></i>Carunchos</li>
-                  <li><i class="fas fa-check"></i>Pichilinga</li>
-                  <li><i class="fas fa-check"></i>Polias</li>
-                  <li><i class="fas fa-check"></i>Brocas</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Insetos Voadores -->
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="pest-category-card">
-                <div class="pest-category-icon">
-                  <i class="fas fa-dove"></i>
-                </div>
-                <h2 class="h4 mb-4">Insetos Voadores</h2>
-                <ul class="pest-list">
-                  <li>
-                    <i class="fas fa-check"></i>Mosquitos (incluindo Aedes
-                    aegypti)
-                  </li>
-                  <li><i class="fas fa-check"></i>Moscas</li>
-                  <li><i class="fas fa-check"></i>Mariposas</li>
-                  <li><i class="fas fa-check"></i>Abelhas (apenas remoção)</li>
-                  <li><i class="fas fa-check"></i>Vespas e marimbondos</li>
-                </ul>
-                <div class="pest-note mt-4">
-                  <i class="fas fa-info-circle"></i>
-                  <p>
-                    O controle de abelhas é feito conforme legislação ambiental,
-                    com foco em manejo, afastamento e proteção à fauna.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Roedores -->
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div class="pest-category-card">
-                <div class="pest-category-icon">
-                  <i class="fas fa-mouse"></i>
-                </div>
-                <h2 class="h4 mb-4">Roedores</h2>
-                <ul class="pest-list">
-                  <li>
-                    <i class="fas fa-check"></i>Ratos de telhado (Rattus rattus)
-                  </li>
-                  <li>
-                    <i class="fas fa-check"></i>Ratazanas (Rattus norvegicus)
-                  </li>
-                  <li>
-                    <i class="fas fa-check"></i>Camundongos (Mus musculus)
-                  </li>
-                </ul>
-              </div>
-            </div>
+        <div class="pest-card">
+          <div class="pest-image-container">
+            <img
+              src="../assets/img/baratas.png"
+              alt="Baratas"
+              class="pest-image"
+            />
           </div>
-
-          <!-- CTA Section -->
-          <div class="row mt-5">
-            <div class="col-12 text-center" data-aos="fade-up">
-              <div class="cta-box p-5 bg-light rounded-4">
-                <h2 class="h3 mb-4">Está com problemas com pragas?</h2>
-                <p class="lead mb-4">
-                  Entre em contato conosco para uma avaliação gratuita.
-                </p>
-                <a
-                  href="https://wa.me/5581999999999"
-                  class="btn btn-lg btn-success me-3"
-                >
-                  <i class="fab fa-whatsapp me-2"></i>WhatsApp
-                </a>
-                <a href="tel:8199999999" class="btn btn-lg btn-outline-primary">
-                  <i class="fas fa-phone me-2"></i>Ligar Agora
-                </a>
-              </div>
+          <div class="pest-footer">
+            <button class="btn-saiba-mais" onclick="toggleInfo(this)">
+              Saiba Mais
+            </button>
+          </div>
+          <div class="pest-info">
+            <h2 class="pest-title">Baratas</h2>
+            <div class="tags mb-3">
+              <span class="info-tag tag-risk">Risco à Saúde</span>
             </div>
+            <div class="pest-description">
+              <p>
+                As baratas são pragas urbanas comuns e resistentes, que oferecem
+                sérios riscos à saúde humana. Elas transmitem doenças como
+                salmonelose, gastroenterite e disenteria, além de provocarem
+                alergias e crises respiratórias.
+              </p>
+              <h3 class="h5 mt-3 mb-2">Espécies Comuns:</h3>
+              <ul>
+                <li>Barata-de-esgoto (Periplaneta americana)</li>
+                <li>Barata-francesinha (Blattella germanica)</li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/5581995316082"
+              class="contact-btn"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp me-2"></i>Solicitar Orçamento
+            </a>
           </div>
         </div>
-      </section>
-    </main>
 
-    <!-- Footer -->
+        <div class="pest-card">
+          <div class="pest-image-container">
+            <img
+              src="../assets/img/formigas.png"
+              alt="Formigas"
+              class="pest-image"
+            />
+          </div>
+          <div class="pest-footer">
+            <button class="btn-saiba-mais" onclick="toggleInfo(this)">
+              Saiba Mais
+            </button>
+          </div>
+          <div class="pest-info">
+            <h2 class="pest-title">Formigas</h2>
+            <div class="tags mb-3">
+              <span class="info-tag tag-risk">Risco à Saúde</span>
+            </div>
+            <div class="pest-description">
+              <p>
+                As formigas são insetos sociais que vivem em colônias
+                organizadas e estão entre as pragas mais comuns em residências e
+                empresas. Algumas espécies, como a formiga-faraó, podem
+                contaminar alimentos e utensílios, transmitindo bactérias como
+                salmonela e estafilococos.
+              </p>
+            </div>
+            <a
+              href="https://wa.me/5581995316082"
+              class="contact-btn"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp me-2"></i>Solicitar Orçamento
+            </a>
+          </div>
+        </div>
+
+        <div class="pest-card">
+          <div class="pest-image-container">
+            <img
+              src="../assets/img/escorpiao.png"
+              alt="Escorpiões"
+              class="pest-image"
+            />
+          </div>
+          <div class="pest-footer">
+            <button class="btn-saiba-mais" onclick="toggleInfo(this)">
+              Saiba Mais
+            </button>
+          </div>
+          <div class="pest-info">
+            <h2 class="pest-title">Escorpiões</h2>
+            <div class="tags mb-3">
+              <span class="info-tag tag-risk">Alto Risco à Saúde</span>
+            </div>
+            <div class="pest-description">
+              <p>
+                Os escorpiões são animais peçonhentos que representam um sério
+                risco à saúde, especialmente em áreas urbanas. Seu veneno pode
+                causar dor intensa, inchaço e, em casos graves, reações
+                alérgicas e até morte.
+              </p>
+              <h3 class="h5 mt-3 mb-2">Espécies Comuns:</h3>
+              <ul>
+                <li>Escorpião-amarelo (Tityus serrulatus)</li>
+                <li>Escorpião-marrom (Tityus bahiensis)</li>
+              </ul>
+            </div>
+            <a
+              href="https://wa.me/5581995316082"
+              class="contact-btn"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp me-2"></i>Solicitar Orçamento
+            </a>
+          </div>
+        </div>
+
+        <div class="pest-card">
+          <div class="pest-image-container">
+            <img
+              src="../assets/img/cupins.png"
+              alt="Cupins"
+              class="pest-image"
+            />
+          </div>
+          <div class="pest-footer">
+            <button class="btn-saiba-mais" onclick="toggleInfo(this)">
+              Saiba Mais
+            </button>
+          </div>
+          <div class="pest-info">
+            <h2 class="pest-title">Cupins</h2>
+            <div class="tags mb-3">
+              <span class="info-tag tag-risk">Danos Estruturais</span>
+            </div>
+            <div class="pest-description">
+              <p>
+                Os cupins são pragas silenciosas que causam grandes prejuízos
+                estruturais em residências e comércios. Alimentam-se de madeira,
+                papel e derivados de celulose, comprometendo móveis, portas e
+                até documentos.
+              </p>
+            </div>
+            <a
+              href="https://wa.me/5581995316082"
+              class="contact-btn"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp me-2"></i>Solicitar Orçamento
+            </a>
+          </div>
+        </div>
+
+        <!-- Repita a estrutura para as demais pragas conforme necessário -->
+
+        <!-- Repita o padrão para outras pragas -->
+      </div>
+    </div>
+
+    <!-- Footer Container -->
     <div id="footer-container"></div>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../scripts/components.js"></script>
+    <script>
+      function toggleInfo(button) {
+        const card = button.closest(".pest-card");
+        const info = card.querySelector(".pest-info");
+        const isActive = info.classList.contains("active");
+
+        // Fecha todos os cards abertos
+        document.querySelectorAll(".pest-info").forEach((el) => {
+          el.classList.remove("active");
+        });
+
+        // Atualiza todos os botões
+        document.querySelectorAll(".btn-saiba-mais").forEach((btn) => {
+          btn.textContent = "Saiba Mais";
+        });
+
+        // Se não estava ativo, abre o card clicado
+        if (!isActive) {
+          info.classList.add("active");
+          button.textContent = "Fechar";
+        }
+      }
+    </script>
   </body>
 </html>

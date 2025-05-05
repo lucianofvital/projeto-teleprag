@@ -1,97 +1,105 @@
-/* Estilos da Página de Pragas Urbanas */
-.pest-category-card {
-    background: white;
+.pest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
     padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    height: 100%;
-    transition: all 0.3s ease;
-}
+  }
 
-.pest-category-card:hover {
+  .pest-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .pest-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
+  }
 
-.pest-category-icon {
-    width: 80px;
-    height: 80px;
-    background: var(--light-bg);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-}
+  .pest-image-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* Mantém proporção quadrada */
+  }
 
-.pest-category-icon i {
-    font-size: 2rem;
-    color: var(--primary);
-}
-
-.pest-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.pest-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.pest-list li:last-child {
-    border-bottom: none;
-}
-
-.pest-list li i {
-    color: var(--primary);
-    font-size: 0.9rem;
-}
-
-.pest-note {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+  .pest-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Mostra imagem completa */
     padding: 1rem;
-    background: var(--light-bg);
-    border-radius: 10px;
-}
+  }
 
-.pest-note i {
-    color: var(--primary);
-    font-size: 1.2rem;
-    margin-top: 0.2rem;
-}
+  .pest-footer {
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #eee;
+  }
 
-.pest-note p {
-    margin: 0;
+  .btn-saiba-mais {
+    background: #007bff;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    width: 100%;
+  }
+
+  .btn-saiba-mais:hover {
+    background: #0056b3;
+    color: white;
+  }
+
+  .pest-info {
+    display: none;
+    padding: 1.5rem;
+    border-top: 1px solid #eee;
+  }
+
+  .pest-info.active {
+    display: block;
+  }
+
+  .contact-btn {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-btn:hover {
+    background: #128c7e;
+    color: white;
+  }
+
+  .info-tag {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    border-radius: 50px;
     font-size: 0.9rem;
-    color: #666;
-}
+    margin: 0.25rem;
+  }
 
-/* CTA Box */
-.cta-box {
-    background: linear-gradient(to right, var(--light-bg) 0%, #ffffff 100%);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-/* Responsividade */
-@media (max-width: 991px) {
-    .pest-category-card {
-        margin-bottom: 2rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .pest-category-card {
-        padding: 1.5rem;
-    }
-    
-    .cta-box {
-        padding: 1.5rem !important;
-    }
-}
+  .tag-risk {
+    background: #ffe5e5;
+    color: #dc3545;
+  }
+  .tag-warning {
+    background: #fff3cd;
+    color: #ffc107;
+  }
+  .tag-info {
+    background: #e7f5ff;
+    color: #0dcaf0;
+  }

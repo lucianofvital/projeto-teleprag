@@ -55,3 +55,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Inicialização do carrossel de pragas
+document.addEventListener("DOMContentLoaded", function () {
+  // Configuração do carrossel
+  const pragasCarousel = new bootstrap.Carousel(
+    document.getElementById("pragasCarousel"),
+    {
+      interval: 3000, // Tempo entre slides (3 segundos)
+      wrap: true, // Loop infinito
+      touch: true, // Habilita gestos touch
+    }
+  );
+
+  // Pausa o carrossel no hover (opcional)
+  document
+    .querySelector("#pragasCarousel")
+    .addEventListener("mouseenter", function () {
+      pragasCarousel.pause();
+    });
+
+  document
+    .querySelector("#pragasCarousel")
+    .addEventListener("mouseleave", function () {
+      pragasCarousel.cycle();
+    });
+});
