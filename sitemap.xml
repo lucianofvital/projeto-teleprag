@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.DedetizaRecife.com">
+    <!-- Página Principal -->
+    <url>
+        <loc>https://teleprag.com.br/</loc>
+        <lastmod>2024-05-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Páginas de Serviços -->
+    <url>
+        <loc>https://teleprag.com.br/pages/servicos.html</loc>
+        <lastmod>2024-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://teleprag.com.br/pages/servico-desinsetizacao.html</loc>
+        <lastmod>2024-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://teleprag.com.br/pages/servico-desratizacao.html</loc>
+        <lastmod>2024-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Página de Pragas -->
+    <url>
+        <loc>https://teleprag.com.br/pages/pragas-urbanas.html</loc>
+        <lastmod>2024-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Página Sobre -->
+    <url>
+        <loc>https://teleprag.com.br/pages/sobre.html</loc>
+        <lastmod>2024-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Página Contato -->
+    <url>
+        <loc>https://teleprag.com.br/pages/contato.html</loc>
+        <lastmod>2024-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+</urlset>
