@@ -211,6 +211,9 @@ h2 {
   position: relative;
   background: transparent;
   margin-top: -150px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10;
 }
 
 .curved-div svg {
@@ -866,6 +869,44 @@ h2 {
 .differential-carousel .carousel-item:hover img {
   transform: scale(1.05);
 }
+
+/* Estilos do Carrossel de Feedbacks */
+.feedback-carousel {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.feedback-carousel .carousel-item {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: auto;
+}
+
+.feedback-carousel .carousel-item {
+  opacity: 0;
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  transform: scale(0.95);
+}
+
+.feedback-carousel .carousel-item.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.feedback-carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .feedback-carousel .carousel-item {
+    max-height: 300px;
+  }
+}
+
 /* ======= Área de Atuação ======= */
 .cities-grid {
   display: grid;
@@ -1204,4 +1245,31 @@ h2 {
 
 .footer-floating-whatsapp {
   animation: fadeInButton 0.3s ease forwards;
+}
+
+/* Estilos para as seções de Licenciamento e Satisfação */
+.licenses-container,
+.clients-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.licenses-container img,
+.clients-container img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.licenses-container img:hover,
+.clients-container img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .licenses-container,
+  .clients-container {
+    padding: 0 15px;
+  }
 }
